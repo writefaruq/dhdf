@@ -162,6 +162,7 @@ INSTALLED_APPS = (
     "django.contrib.sessions",
     "django.contrib.sites",
     "django.contrib.sitemaps",
+    "staticfiles",
     "mezzanine.conf",
     "mezzanine.core",
     "mezzanine.generic",
@@ -169,6 +170,7 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.pages",
     "mezzanine.twitter",
+	"mdown",
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -217,6 +219,7 @@ OPTIONAL_APPS = (
 
 DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 
+THEME="mytheme"
 
 ##################
 # LOCAL SETTINGS #
@@ -229,6 +232,14 @@ try:
     from local_settings import *
 except ImportError:
     pass
+
+
+##################
+# MDOWN SETTINGS #
+##################
+STATIC_URL = "site_mdeia"
+#RICHTEXT_WIDGET_CLASS = "mdown.forms.WmdWidget"
+#RICHTEXT_FILTER = "mdown.filters.codehilite"
 
 
 ####################
